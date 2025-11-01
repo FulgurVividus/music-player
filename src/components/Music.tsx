@@ -9,6 +9,7 @@ type Props = {
 const Music = ({ music }: Props) => {
   return (
     <div
+      onClick={() => musicPlayerStore.play(music)}
       className="
         flex items-center gap-4 p-4 rounded-2xl bg-white/5 backdrop-blur-sm
         hover:bg-white/10 transition-all duration-300 hover:shadow-lg
@@ -28,7 +29,7 @@ const Music = ({ music }: Props) => {
         <span className="font-semibold truncate">{music.songName}</span>
       </div>
 
-      {musicPlayerStore.isPlaying && (
+      {musicPlayerStore.currentSong === music && (
         <span
           className="
             text-xs px-3 py-1 rounded-full bg-gray-500/30 text-gray-600

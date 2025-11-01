@@ -1,14 +1,13 @@
 import type { MusicType } from "../data/playlist.data";
+import { musicPlayerStore } from "../store/musicPlayer.store";
 import Music from "./Music";
 
-type Props = {
-  playlist: MusicType[];
-};
+const Playlist = () => {
+  const playlist = musicPlayerStore.playlist;
 
-const Playlist = ({ playlist }: Props) => {
   return (
     <>
-      <ul className="flex flex-col gap-4">
+      <ul className="flex flex-col gap-2">
         {playlist.map((music: MusicType) => (
           <li key={music.id}>
             <Music music={music} />

@@ -1,6 +1,5 @@
 import Player from "./components/Player";
 import Playlist from "./components/Playlist";
-import { playlist } from "./data/playlist.data";
 
 const App = () => {
   return (
@@ -18,9 +17,11 @@ const App = () => {
         </p>
       </div>
 
-      <Playlist playlist={playlist} />
+      <Playlist />
 
-      <Player />
+      <div className="absolute bottom-4 left-0 px-4 w-full">
+        <Player />
+      </div>
     </main>
   );
 };
