@@ -95,7 +95,7 @@ const Player = () => {
             </button>
           </div>
 
-          <div className="grid grid-cols-[100px_1fr_100px]">
+          <div className="grid grid-cols-[60px_1fr_60px] items-center">
             {/* current time */}
             <p className="text-white text-start font-semibold">
               {formatSecondsToMinutes(currentTime)}

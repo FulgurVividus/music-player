@@ -32,8 +32,8 @@ const Music = ({ music }: Props) => {
       {musicPlayerStore.currentSong === music && (
         <span
           className="
-            text-xs px-3 py-1 rounded-full bg-gray-500/30 text-gray-600
-            animate-pulse font-medium
+            text-xs p-1 rounded-full bg-gray-500/30 text-gray-700
+            animate-spin [animation-duration:3s] font-medium
           "
         >
           <CiMusicNote1 size={20} />
