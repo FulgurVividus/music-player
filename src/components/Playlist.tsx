@@ -7,7 +7,7 @@ const Playlist = () => {
 
   return (
     <>
-      <ul className="flex flex-col gap-2">
+      <ul className="flex flex-col gap-2 p-2 h-100 overflow-y-auto [scrollbar-width:none]">
         {playlist.map((music: MusicType) => (
           <li key={music.id}>
             <Music music={music} />

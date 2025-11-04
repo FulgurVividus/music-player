@@ -31,6 +31,7 @@ const Player = () => {
 
       setDuration(audio.duration);
       progressBar.current.max = String(audio.duration);
+      progressBar.current.min = "0";
 
       audio.addEventListener("timeupdate", updateTime);
       audio.addEventListener("ended", autoPlayNextSong);
@@ -106,6 +107,7 @@ const Player = () => {
               <input
                 type="range"
                 value={currentTime}
+                step={0.001}
                 ref={progressBar}
                 onChange={changeRange}
                 className="slider"
